@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universe of Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="parallax-container">
+        <div class="parallax-background"></div>
+        <div class="content">
+            <h1>"Welcome to a world where every page is a new adventure. Let the journey of knowledge begin!"</h1>
+            <p>"In this space, every book is a new world waiting to be explored. Welcome to your next adventure."</p>
+            <title>Scroll Down Message</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+        
+            <div class="scroll-message">
+                <p>Dive deeper down to.".</p>
+                <div class="arrow"></div>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>"The story continues as you scroll."</h2>
+        <p>Unveil the next chapter as you scroll down.</p>
+
+    </div>
+</body>
+    <title>Book Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet" />
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        #dark-mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #dark-mode-toggle:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="dark-mode-toggle">🌙</button>
+
+    <!-- Login Page -->
+    <div id="login-page">
+        <div class="login-container">
+            <h2>Welcome to the Book World</h2>
+            <p class="luxury-message">“There is no friend as loyal as a book!</p>
+
+            <div class="login-buttons">
+                <button class="login-btn" id="google-btn">Login with Google</button>
+                <button class="login-btn" id="facebook-btn">Login with Facebook</button>
+                <button class="login-btn" id="twitter-btn">Login with Twitter</button>
+                <button class="login-btn" id="guest-btn">Continue as Guest</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Page (yema j rakhis tyo login page ma aaudaina) (hidden initially) -->
+     
+    <div id="book-page" style="display: none;">  
+         <ul class = "navbar">
+        <li  class="navlink">Home</li>
+        <li  class="navlink">Fiction</li>
+        <li  class="navlink">Non-Fiction</li>
+        <li  class="navlink">Mythology</li>
+        <li  class="navlink">Download</li>
+    </ul>
+    
+        <h1 class="title">Books</h1>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for a book..." onkeyup="searchBooks()">
+            <span class="search-icon">🔍</span>
+            <button class="clear-btn" onclick="clearSearch()">Clear</button>
+        </div>
+
+        <section class="book-container">
+            
+            <!-- Book Cards -->
+            <div class="book-card">
+                <a href="Rich-Dad-Poor-Dad.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./rich dad poor dad.png" alt="Rich-Dad-Poor-Dad Book Cover" />
+                </a>
+                <h4>Rich-Dad-Poor-Dad</h4>
+            </div>
+            <div class="book-card">
+                <a href="https://1drv.ms/b/c/de0167ec70cc5b41/EYdQ-g-J6C5MhUG4WS_l2UIBq_eeH7QPACFdm5wDXnaefQ?e=y4fmne" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Atomic Habit.png" alt="Atomic Habit Book Cover" />
+                </a>
+                <h4>Atomic Habit</h4>
+            </div>
+            <div class="book-card">
+                <a href="Room number 105.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Room no.105.png" alt="Room No. 105 Book Cover" />
+                </a>
+                <h4>Room No. 105</h4>
+            </div>
+            <div class="book-card">
+                <a href="Days At The Morisaki Bookshop PDF.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Day at a morisaki bookshop.png" alt="Day at Morisaki Bookshop" />
+                </a>
+                <h4>Day at Morisaki Bookshop</h4>
+            </div>
+        
+            <div class="book-card">
+                <a href="Mission 101.docx" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Mission 101.png" alt="Mission 101 Book Cover" />
+                </a>
+                <h4>Mission 101</h4>
+            </div>
+            <div class="book-card">
+                <a href="the-time-machine.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./TimeMachine.png" alt="Time Machine Book Cover" />
+                </a>
+                <h4>Time Machine</h4>
+            </div>
+            <div class="book-card">
+                <a href="attitude-is-everything.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Attitude.png" alt="Attitude Book Cover" />
+                </a>
+                <h4>Attitude</h4>
+            </div>
+            <div class="book-card">
+                <a href="Falling in love official.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Falling in Love.png" alt="Falling in Love Book Cover"/>
+                </a>
+                <h4>Falling in love </h4>
+            </div>
+            <div class="book-card">
+                <a href="Escape the bloppy official.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./escape the bloppy.png" alt="Escape the Bloppy Cover"/>
+                </a>
+                <h4>Escape the Bloppy </h4>
+            </div>
+    <div class="book-card">
+        <a href="gyan_ganga_hindi.pdf" target="_blank">
+            <img class="book-image" height="300px" width="250px" src="./gyan ganga.png" alt="Gyan Ganga Cover"/>
+        </a>
+        <h4>Gyan Ganga </h4>
+    </div>
+    <div class="book-card">
+                <a href="THE-MAGIC-OF-THINKING-BIG.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./magic.png" alt="The THE-MAGIC-OF-THINKING-BIG Cover"/>
+                </a>
+                <h4>The Magic of thinking big </h4>
+            </div> 
+    <div class="book-card">
+        <a href="vedh puran.pdf" target="_blank">
+            <img class="book-image" height="300px" width="250px" src="./vedh puran.png" alt="vedh puran Cover"/>
+        </a>
+        <h4>Vedh Puran </h4>
+    </div>
+    <div class="book-card">
+        <a href="Joseph Murphy - The Power of Your Subconcious Mind (1988).pdf" target="_blank">
+            <img class="book-image" height="300px" width="250px" src="./Power of Subconsious.png" alt="The Power Of Subconcious Mind Cover"/>
+        </a>
+        <h4>The Power Of Subconcious Mind </h4>
+    </div>
+    <div class="book-card">
+        <a href="The-Holy-Bible-King-James-Version.pdf" target="_blank">
+            <img class="book-image" height="300px" width="250px" src="./jesus.png" alt="The-Holy-Bible-King-James-Version"/>
+        </a>
+        <h4>The-Holy-Bible-King-James-Version </h4>
+    </div>
+    <div class="book-card">
+        <a href="The+48+Laws+Of+Power.pdf" target="_blank">
+            <img class="book-image" height="300px" width="250px" src="./Power.png" alt="The 48 Laws of Power Cover"/>
+        </a>
+        <h4>The 48 Laws Of Power </h4>
+    </div>
+    <div class="book-card">
+        <a href="101 Essay to change your mind.pdf" target="_blank">
+            <img class="book-image" height="300px" width="250px" src="./101 Essay.png" alt="101 Essay that will change the way you think Cover"/>
+        </a>
+        <h4>101 Essay that will CHANGE the way You THINK </h4>
+   </div>
+   <div class="book-card">
+    <a href="Preview-Good-Vibes-Good-Life-by-Vex-King.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Good Vibes.png" alt="GOOD VIBES GOOD Preview-Good-Vibes-Good-Life-by-Vex-King Cover"/>
+    </a>
+    <h4>Good-Vibes-Good-Life </h4>
+   </div>
+   <div class="book-card">
+    <a href="The great controversy.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./The Great controversy.png" alt="The Great controversy Cover"/>
+    </a>
+    <h4>The Great controversy </h4>
+   </div>
+<div class="book-card">
+    <a href="One monk who sold his ferrari.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./The monk.png" alt="One Monk Who sold his ferrari"/>
+    </a>
+    <h4>The Monk Who Sold His Ferrari </h4>
+</div>
+<div class="book-card">
+    <a href="Diary of a Camping Night.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./camp.png" alt="Diary of Camping Night"/>
+    </a>
+    <h4>Diary of Camping Night</h4>
+</div>
+<div class="book-card">
+    <a href="Little-Life.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Little Life.png" alt="A Little-Life"/>
+    </a>
+    <h4>A Little-Life</h4>
+</div>
+<div class="book-card">
+    <a href="White Noise.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./White Noise.png" alt="White Noise"/>
+    </a>
+    <h4>White Noise</h4>
+</div>
+<div class="book-card">
+    <a href="American_Psycho.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./American Psycho.png" alt="American_Psycho"/>
+    </a>
+    <h4>American_Psycho</h4>
+</div>
+<div class="book-card">
+    <a href="TKM.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./TKM.png" alt="To Kill a Mocking Bird"/>
+    </a>
+    <h4>To Kill a Mocking Bird</h4>
+</div>
+<div class="book-card">
+    <a href="the-great-gatsby.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./the-great-gatsby.png" alt="The-Great-Gatsby"/>
+    </a>
+    <h4>The-Great-Gatsby</h4>
+</div>
+<div class="book-card">
+    <a href="Steve_Jobs_in_His_Own_Words___.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Steve Jobs in his own way.png" alt="Steve_Jobs_in_His_Own_Word"/>
+    </a>
+    <h4>Steve_Jobs_in_His_Own_Word</h4>
+</div>
+<div class="book-card">
+    <a href="Steve-Jobs-PDFDrive-1.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Steve.png" alt="Steve_Jobs"/>
+    </a>
+    <h4>Steve_Jobs</h4>
+</div>
+<div class="book-card">
+    <a href="One Arranged Murder by Chetan Bhagat.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Arrange Murder.png" alt="One Arranged Murder"/>
+    </a>
+    <h4>One Arranged Murder</h4>
+</div>
+<div class="book-card">
+    <a href="One_Indian_Girl.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./One Indian Girl.png" alt="One Indian Girl"/>
+    </a>
+    <h4>One Indian Girl</h4>
+</div>
+<div class="book-card">
+    <a href="3-mistake-of-my-life.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./3 mistake of my life.png." alt="3-mistake-of-my-life"/>
+    </a>
+    <h4>3-mistake-of-my-life</h4>
+</div>
+<div class="book-card">
+    <a href="Ikigai.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Ikigai.png" alt="Ikigai"/>
+    </a>
+    <h4>Ikigai</h4>
+</div>
+<div class="book-card">
+    <a href="TheTeachingofBuddha.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./buddha.png" alt="The-Teaching-Of-Buddha"/>
+    </a>
+    <h4>The-Teaching-Of-Buddha</h4>
+</div>
+<div class="book-card">
+    <a href="Word-Of-The-Buddha.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Word of Buddha.png" alt="Word-Of-The-Buddha"/>
+    </a>
+    <h4>Word-Of-The-Buddha</h4>
+</div>
+<div class="book-card">
+    <a href="ancient_nepal_159_full.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./ancient nepal.png" alt="Ancient_Nepal_159"/>
+    </a>
+    <h4>Ancient_Nepal_159</h4>
+</div>
+<div class="book-card">
+    <a href="Valmiki Ramayana.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./valmiki ramayan.png" alt="Ramayana"/>
+    </a>
+    <h4>Ramayana</h4>
+</div>
+<div class="book-card">
+    <a href="MunaMadan nepali.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Munamadan nepali.png" alt="मुना मदन"/>
+    </a>
+    <h4>मुना मदन</h4>
+</div>
+<div class="book-card">
+    <a href="Muna madan english.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Munamadanenglish.png" alt="MunaMadan"/>
+    </a>
+    <h4>Muna Madan</h4>
+</div>
+<div class="book-card">
+    <a href="Alice in Wonderland.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Alice in wonderland.png" alt="Alice in Wonderland"/>
+    </a>
+    <h4>Alice in Wonderland</h4>
+</div>
+<div class="book-card">
+    <a href="Hunger.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Hunger.png" alt="Hunger"/>
+    </a>
+    <h4>Hunger</h4>
+</div>
+<div class="book-card">
+    <a href="The-Kite-Runner.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./The kite runner.png" alt="The-Kite-Runner"/>
+    </a>
+    <h4>The-Kite-Runner</h4>
+</div>
+<div class="book-card">
+    <a href="The Stranger.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./Stranger.png" alt="The-Stranger"/>
+    </a>
+    <h4>The-Stranger</h4>
+</div>
+<div class="book-card">
+    <a href="lost-time.pdf" target="_blank">
+        <img class="book-image" height="300px" width="250px" src="./In search of lost time.png" alt="In-Search-Of-Lost-Time"/>
+    </a>
+    <h4>In-Search-Of-Lost-Time</h4>
+</div>
+</section>
+<div id="review-section" class="section"></div>
+    <h2>Rate & Review</h2>
+    <div class="rating">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+    </div>
+
+    <textarea id="review-text" placeholder="Write your review here..." rows="4"></textarea>
+    <button onclick="submitReview()">Submit Review</button>
+
+    <h3>User Reviews:</h3>
+    <ul id="review-list"></ul>
+</div>
+</body>
+    <script>
+        // Dark Mode Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const darkModeToggle = document.getElementById("dark-mode-toggle");
+            const body = document.body;
+
+            // Apply dark mode if stored in Local Storage
+            if (localStorage.getItem("darkMode") === "enabled") {
+                body.classList.add("dark-mode");
+            }
+
+            // Check if the button exists before adding an event listener
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener("click", function () {
+                    body.classList.toggle("dark-mode");
+
+                    // Save preference in Local Storage
+                    if (body.classList.contains("dark-mode")) {
+                        localStorage.setItem("darkMode", "enabled");
+                    } else {
+                        localStorage.setItem("darkMode", "disabled");
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+ <script src="./script.js"></script>
+</html>

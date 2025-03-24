@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet" />
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        #dark-mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #dark-mode-toggle:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="dark-mode-toggle">🌙</button>
+
+    <!-- Login Page -->
+    <div id="login-page">
+        <div class="login-container">
+            <h2>Welcome to the Book World</h2>
+            <p class="luxury-message">Choose your login method to access our exclusive collection of books!</p>
+
+            <div class="login-buttons">
+                <button class="login-btn" id="google-btn">Login with Google</button>
+                <button class="login-btn" id="facebook-btn">Login with Facebook</button>
+                <button class="login-btn" id="twitter-btn">Login with Twitter</button>
+                <button class="login-btn" id="guest-btn">Continue as Guest</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Page (hidden initially) -->
+    <div id="book-page" style="display: none;">
+        <h1 class="title">Books</h1>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for a book..." onkeyup="searchBooks()">
+            <span class="search-icon">🔍</span>
+            <button class="clear-btn" onclick="clearSearch()">Clear</button>
+        </div>
+
+        <section class="book-container">
+            <!-- Book Cards -->
+            <div class="book-card">
+                <a href="Rich-Dad-Poor-Dad.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./rich dad poor dad.png" alt="Rich-Dad-Poor-Dad Book Cover" />
+                </a>
+                <h4>Rich-Dad-Poor-Dad</h4>
+            </div>
+            <div class="book-card">
+                <a href="https://1drv.ms/b/c/de0167ec70cc5b41/EYdQ-g-J6C5MhUG4WS_l2UIBq_eeH7QPACFdm5wDXnaefQ?e=y4fmne" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Atomic Habit.png" alt="Atomic Habit Book Cover" />
+                </a>
+                <h4>Atomic Habit</h4>
+            </div>
+            <div class="book-card">
+                <a href="Room number 105.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Room no.105.png" alt="Room No. 105 Book Cover" />
+                </a>
+                <h4>Room No. 105</h4>
+            </div>
+            <div class="book-card">
+                <a href="Days At The Morisaki Bookshop PDF.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Day at a morisaki bookshop.png" alt="Day at Morisaki Bookshop" />
+                </a>
+                <h4>Day at Morisaki Bookshop</h4>
+            </div>
+        
+            <div class="book-card">
+                <a href="Mission 101.docx" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Mission 101.png" alt="Mission 101 Book Cover" />
+                </a>
+                <h4>Mission 101</h4>
+                
+            <div class="book-card">
+                <a href="Escape the bloppy official.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./escape the bloppy.png" alt="Escape the bloppy Book Cover" />
+                </a>
+                <h4>Escape the Bloppy</h4>
+            </div>
+            
+            <div class="book-card">
+                <a href="the-time-machine.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./TimeMachine.png" alt="Time Machine Book Cover" />
+                </a>
+                <h4>Time Machine</h4>
+            </div>
+            <div class="book-card">
+                <a href="attitude-is-everything.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Attitude.png" alt="Attitude Book Cover" />
+                </a>
+                <h4>Attitude</h4>
+            </div>
+            <div class="book-card">
+                <a href="Falling in love official.pdf" target="_blank">
+                    <img class="book-image" height="300px" width="250px" src="./Falling in Love.png" alt="Falling in Love Book Cover"/>
+                </a>
+                <h4>Falling in love </h4>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Dark Mode Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const darkModeToggle = document.getElementById("dark-mode-toggle");
+            const body = document.body;
+
+            // Apply dark mode if stored in Local Storage
+            if (localStorage.getItem("darkMode") === "enabled") {
+                body.classList.add("dark-mode");
+            }
+
+            // Check if the button exists before adding an event listener
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener("click", function () {
+                    body.classList.toggle("dark-mode");
+
+                    // Save preference in Local Storage
+                    if (body.classList.contains("dark-mode")) {
+                        localStorage.setItem("darkMode", "enabled");
+                    } else {
+                        localStorage.setItem("darkMode", "disabled");
+                    }
+                });
+            }
+        });
+    </script>
+</body> <script src="./script.js"></script>
+</html>
