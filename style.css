@@ -213,12 +213,17 @@ scale: 1.2;
 }
 .content h1{
     color: #fff;
+    padding-bottom: 20px;
 }
 .content p{
     color: #fff;
+    padding-bottom: 40px;
+
 }
 .content span{
     color: #fff;
+    padding-bottom: 30px;
+
 }
 .rating {
     display: flex;
