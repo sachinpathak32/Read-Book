@@ -361,108 +361,15 @@
     <h4>Verity</h4>
 </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Rate & Review Section</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-
-    .section {
-      max-width: 600px;
-      margin: auto;
-      background: #f8f9fa;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    h2, h3 {
-      text-align: center;
-      color: #333;
-    }
-
-    .rating {
-      display: flex;
-      justify-content: center;
-      margin: 10px 0;
-    }
-
-    .star {
-      font-size: 30px;
-      cursor: pointer;
-      color: #ccc;
-      transition: color 0.2s;
-    }
-
-    .star.hover,
-    .star.selected {
-      color: gold;
-    }
-
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      resize: vertical;
-    }
-
-    button {
-      display: block;
-      margin: 10px auto;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    #review-list {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    #review-list li {
-      background: #ffffff;
-      padding: 10px;
-      border-radius: 6px;
-      margin-bottom: 10px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .review-stars {
-      color: gold;
-      font-size: 16px;
-    }
-
-    .review-text {
-      margin-top: 4px;
-    }
-  </style>
-</head>
-<body>
-
-  <div id="review-section" class="section">
+</section>
+<div id="review-section" class="section"></div>
     <h2>Rate & Review</h2>
-    <div class="rating" id="star-rating">
-      <span class="star" data-value="1">★</span>
-      <span class="star" data-value="2">★</span>
-      <span class="star" data-value="3">★</span>
-      <span class="star" data-value="4">★</span>
-      <span class="star" data-value="5">★</span>
+    <div class="rating">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
     </div>
 
     <textarea id="review-text" placeholder="Write your review here..." rows="4"></textarea>
@@ -470,61 +377,7 @@
 
     <h3>User Reviews:</h3>
     <ul id="review-list"></ul>
-  </div>
-
-  <script>
-    let selectedRating = 0;
-
-    const stars = document.querySelectorAll('.star');
-    const reviewList = document.getElementById('review-list');
-    const reviewText = document.getElementById('review-text');
-
-    stars.forEach(star => {
-      star.addEventListener('mouseover', () => {
-        highlightStars(star.dataset.value);
-      });
-
-      star.addEventListener('mouseout', () => {
-        highlightStars(selectedRating);
-      });
-
-      star.addEventListener('click', () => {
-        selectedRating = star.dataset.value;
-        highlightStars(selectedRating);
-      });
-    });
-
-    function highlightStars(rating) {
-      stars.forEach(star => {
-        if (star.dataset.value <= rating) {
-          star.classList.add('selected');
-        } else {
-          star.classList.remove('selected');
-        }
-      });
-    }
-
-    function submitReview() {
-      const text = reviewText.value.trim();
-      if (selectedRating === 0 || text === '') {
-        alert("Please select a rating and write a review.");
-        return;
-      }
-
-      const li = document.createElement('li');
-      const starsHTML = '★'.repeat(selectedRating) + '☆'.repeat(5 - selectedRating);
-      li.innerHTML = `
-        <div class="review-stars">${starsHTML}</div>
-        <div class="review-text">${text}</div>
-      `;
-      reviewList.prepend(li); // Newest on top
-      reviewText.value = '';
-      selectedRating = 0;
-      highlightStars(0);
-    }
-  </script>
-
-
+</div>
 </body>
     <script>
         // Dark Mode Toggle
